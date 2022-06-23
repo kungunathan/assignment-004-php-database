@@ -1,8 +1,9 @@
 <?php
+    //1/ database connection
     $server = "localhost";
     $username ="root";
     $password = "";
-    $database = "zalego";
+    $database = "web2";
 
     $conn = mysqli_connect($server,$username,$password,$database);
 
@@ -11,7 +12,7 @@
         $email = $_POST['email'];
 
         $insertData = mysqli_query($conn, "INSERT INTO 
-        subscriber(email)
+        subscribers(email)
         VALUES('$email')");
          if($insertData){
             echo "Data submitted successfully";
@@ -85,28 +86,33 @@
             </div>
         </div>
         <div class="row">
-            <div class="card" style="width: 18rem;">
-                <h1>Skill discovery</h1>
-                <p>
+           <div class="col-lg-4">
+             <div class="card" style="width: 18rem 18px;">
+                 <h1>Skill discovery</h1>
+                 <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic delectus officiis nobis accusamus magnam?
-                </p>
-                <button class="btn btn-primary">View details</button>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <h1>Upskill program</h1>
-                <p>
+                 </p>
+                 <button class="btn btn-primary">View details</button>
+             </div>
+           </div>
+           <div class="col-lg-4">
+             <div class="card" style="width: 18rem 18px;">
+                 <h1>Upskill Program</h1>
+                 <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic delectus officiis nobis accusamus magnam?
-                </p>
-                <button class="btn btn-primary">View details</button>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <h1>Path finding Program</h1>
-                <p>
+                 </p>
+                 <button class="btn btn-primary">View details</button>
+             </div>
+           </div>
+           <div class="col-lg-4">
+             <div class="card" style="width: 18rem 18px;">
+                 <h1>Path Finding Program</h1>
+                 <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic delectus officiis nobis accusamus magnam?
-                </p>
-                <button class="btn btn-primary">View details</button>
-            </div>                      
-        </div>
+                 </p>
+                 <button class="btn btn-primary">View details</button>
+             </div>
+           </div>
     <form action="aboutus.php" method = "POST">
         <div class="row">
             <p>Subscribe to get information, latest news about Zalego Academy</p>
