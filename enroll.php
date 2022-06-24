@@ -42,7 +42,7 @@
                 </ul>
             </main>
             <div class="card">
-                 <p p-5>
+                 <p class="p-5">
                     Looking for a place to kickstrat your career in technolgy? Whether you are a local, new in town or just crusing through we've got loads of great tips and events for you.
                 </p>
                 <h1>Sign up today?</h1>
