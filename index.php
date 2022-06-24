@@ -6,7 +6,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css">
      <link rel="stylesheet" href="style.css">
-     <title>Document</title>
+     <title>Homepage</title>
  </head>
  <body>
   <!-- Navbar design begins -->
@@ -20,6 +20,7 @@
                 <div class="navbar-nav">
                     <a href="index.php" class="nav-link active">Home</a>
                     <a href="aboutus.php" class="nav-link">About us</a>
+                    <a href="enroll.php" class="nav-link btn btn-primary">Register now</a>
                 </div>
             </div>
          </div>

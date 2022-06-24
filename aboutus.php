@@ -9,6 +9,7 @@
 
     if( isset($_POST["submitButton"]))
     {
+        //fetch form data
         $email = $_POST['email'];
 
         $insertData = mysqli_query($conn, "INSERT INTO 
@@ -52,7 +53,7 @@
 </head>
 <body>
   <!-- Navbar design begins -->
-     <!-- <nav class="navbar navbar-expand-lg bg-light fixed-top shadow">
+  <nav class="navbar navbar-expand-lg bg-light fixed-top shadow">
          <div class="container-fluid">
             <a href="index.php" class="navbar-brand">Zalego Academy</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#menus">
@@ -62,10 +63,11 @@
                 <div class="navbar-nav">
                     <a href="index.php" class="nav-link active">Home</a>
                     <a href="aboutus.php" class="nav-link">About us</a>
+                    <a href="enroll.php" class="nav-link btn btn-primary">Register now</a>
                 </div>
             </div>
          </div>
-     </nav> -->
+     </nav>
      <!-- Navbar design ends here -->
      <main class="p-5 bg-secondary mb-4">
         <h1>About us</h1>
@@ -85,7 +87,7 @@
                 <img src="laptop1.jfif" alt="Laptop image" class="rounded">
             </div>
         </div>
-        <div class="row">
+        <div class="row ">
            <div class="col-lg-4">
              <div class="card" style="width: 18rem 18px;">
                  <h1>Skill discovery</h1>
@@ -124,6 +126,10 @@
         </div>
     </form>
     </div>
+    <hr>
+    <footer>
+        &copy; Zalego academy 2022
+    </footer>
      </div>
      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
      <script src="bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js"></script>
