@@ -41,10 +41,12 @@
                     </li>
                 </ul>
             </main>
-            <div class="card">
-                 <p class="p-5">
+            <div class="row">
+                <p class="p-5">
                     Looking for a place to kickstrat your career in technolgy? Whether you are a local, new in town or just crusing through we've got loads of great tips and events for you.
                 </p>
+            </div>
+            <div class="card">
                 <h1>Sign up today?</h1>
                 <form action="">
                     <div class="row">
