@@ -1,3 +1,33 @@
+<?php
+    //1/ database connection
+    $server = "localhost";
+    $username ="root";
+    $password = "";
+    $database = "web2";
+
+    $conn = mysqli_connect($server,$username,$password,$database);
+
+    if( isset($_POST["submitButton"]))
+    {
+        //fetch form data
+        $fullname = $_POST[''];
+        $phonenumber = $_POST[''];
+        $email = $_POST[''];
+        $gender = $_POST[''];
+        $course = $_POST[''];
+
+        $insertData = mysqli_query($conn, "INSERT INTO 
+        subscribers(email)
+        VALUES('$email')");
+         if($insertData){
+            echo "Data submitted successfully";
+        }
+        else{
+            echo "error occured";
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -30,7 +60,7 @@
         <div class="container">
             <main class="p-5 bg-secondary mb-4">
                 <h1>JULY SOFTWARE ENROLLMENT CAMP</h1>
-                <ul>
+                <ul style="list-style-type:none">
                     <li>
                         <span><i class="fa fa-calendar" aria-hidden="true"></i></span>
                         <span>20th July 2022 </span>
@@ -66,8 +96,8 @@
                             <label for="gender" class="form-label">What's your gender?</label>
                             <select class="form-select" aria-label="Default select example">
                                 <option selected>--Select your gender--</option>
-                                <option value="1">Male</option>
-                                <option value="2">Female</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
                             </select>
                         </div>
                     </div>
@@ -77,11 +107,32 @@
                     <label for="course" class= "form-label">What's your preffered course?</label>
                     <select class="form-select" aria-label="Default select example">
                         <option selected>--Select your course--</option>
-                        <option value="1">Web Design</option>
-                        <option value="2">Data analysis</option>
-                        <option value="3">Cyber security</option>
+                        <option value=">Web Design">Web Design</option>
+                        <option value="Data analysis">Data analysis</option>
+                        <option value="Cyber security">Cyber security</option>
                     </select>
                 </form>
+                <p>
+                    You agree by providing your information you understand allour data privacy and protection policy outlined in our Terms & conditions and the privacy policy statements.
+                </p>
+
+                <input type="checkbox" name="agreement" id="Agree to terms and conditions">Agree to terms and conditions</input>
+                <button type="submit" name = "submitButton" class = "btn btn-primary">Submit application</button>
         </div>
+        <form action="aboutus.php" method = "POST">
+        <div class="row">
+            <p>Subscribe to get information, latest news about Zalego Academy</p>
+            <div class="mb-3 col-lg-6">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" name ="email" class="form-control" placeholder="Your e-mail address">
+                <button type="submit" name = "submitButton" class="btn btn-primary">Subscribe</button>
+            </div>
+        </div>
+    </form>
+    </div>
+    <hr>
+    <footer>
+        &copy; Zalego academy 2022
+    </footer>
     </body>        
 </html>
