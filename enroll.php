@@ -86,7 +86,7 @@
                         </div>
                         <div class="col-lg-6">
                             <label for="phonenumber" class="form-label"><b>Phone Number:</b></label>
-                            <input type="email" name = "phonenumber" class="form-control" placeholder="+2547.....">
+                            <input type="tel" name = "phonenumber" class="form-control" placeholder="+2547.....">
                         </div>
                         <div class="col-lg-6">
                             <label for="email" class="form-label"><b>E-mail Address:</b></label>
