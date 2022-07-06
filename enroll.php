@@ -1,5 +1,5 @@
 <?php
-    //1/ database connection
+    //1 database connection
         $server = "localhost";
         $username ="root";
         $password = "";
@@ -119,7 +119,7 @@
                             <input type="checkbox" name="agreement" id="Agree to terms and conditions">Agree to terms and conditions</input>
                         </div>
                         <div class="col-lg-4">
-                            <button type="submit" name = "submitApplication" class = "btn btn-primary">Submit application</button>
+                            <button type="submit" name ="submitApplication" class = "btn btn-primary">Submit application</button>
                          </div>
                     </div>
                     </form>
