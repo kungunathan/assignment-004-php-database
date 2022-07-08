@@ -107,7 +107,7 @@
                     <label for="course" class= "form-label">What's your preffered course?</label>
                     <select class="form-select" aria-label="Default select example" name = "course">
                         <option selected>--Select your course--</option>
-                        <option value=">Web Design">Web Design</option>
+                        <option value="Web Design">Web Design</option>
                         <option value="Data analysis">Data analysis</option>
                         <option value="Cyber security">Cyber security</option>
                     </select>
