@@ -1,3 +1,35 @@
+<?php
+    //1 database connection
+        $server = "localhost";
+        $username ="root";
+        $password = "";
+        $database = "web2";
+
+    $conn = mysqli_connect($server,$username,$password,$database);
+
+    if( isset($_POST["submitMessage"]))
+    {
+        //fetch form data
+        $firstname = $_POST['firstname'];
+        $lastname = $_POST['lastname'];
+		$phonenumber =  $_POST['phonenumber'];
+		$email =  $_POST['email'];
+		$message = $_POST['message'];
+
+
+        $insertData = mysqli_query($conn, "INSERT INTO 
+        contactus(firstname,lastname,phonenumber,email,message)
+        VALUES('$firstname','$lastname','$phonenumber','$email','$message')");
+         if($insertData){
+            echo "Data submitted successfully";
+            header('location:index.php');
+        }
+        else{
+            echo "Error occured";
+        }
+    }
+?> 
+ 
  <!DOCTYPE html>
  <html lang="en">
  <head>
@@ -58,34 +90,34 @@
             <!-- Contact us form  -->
             <h1>Contact Us</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo reiciendis excepturi veniam eveniet perferendis nemo quos vero doloremque aspernatur enim hic rerum beatae sed, mollitia omnis, quibusdam expedita accusamus a.</p>
-            <form>
+            <form action="index.php" method = "POST">
                 <div class="row">
                      <div class="mb-3 col-lg-6">
                         <label for="firstName" class="form-label">First Name</label>
-                        <input type="text" class="form-control" placeholder="Enter your first name">
+                        <input type="text" name = "firstname" class="form-control" placeholder="Enter your first name">
                     </div>
                     <div class="mb-3 col-lg-6">
                         <label for="lastName" class="form-label">Last Name</label>
-                        <input type="text" class="form-control" placeholder="Enter your last name">
+                        <input type="text" name = "lastname" class="form-control" placeholder="Enter your last name">
                     </div>
                 </div>
                 <div class="row">
                      <div class="mb-3 col-lg-6">
                         <label for="phoneNumber" class="form-label">Phone number</label>
-                        <input type="tel" class="form-control" placeholder="Enter your Telephone number">
+                        <input type="tel" name = "phonenumber" class="form-control" placeholder="Enter your Telephone number">
                     </div>
                     <div class="mb-3 col-lg-6">
                         <label for="email" class="form-label">E-mail</label>
-                        <input type="email" class="form-control" placeholder="Enter your e-mail">
+                        <input type="email" name = "email" class="form-control" placeholder="Enter your e-mail">
                     </div>
                 </div>
                  <div class="row">
                     <div class="mb-3 col-lg-12">
                         <label for="mesage" class="form-label">Your message</label>
-                        <textarea cols="30" rows="5" class="form-control"></textarea>
+                        <textarea cols="30" rows="5" name = "message" class="form-control"></textarea>
                     </div>
                 </div>
-               <button type="submit" class="btn btn-primary">Send a messsage</button> 
+               <button type="submit" name="submitMessage" class="btn btn-primary">Send a messsage</button> 
             </form>
          </div>
          <!-- Contact us form ends -->
